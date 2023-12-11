@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Layout from "../components/Layout"
 import { useFormik } from "formik";
 import * as Yup from 'yup'
-import { mutation,gql, useMutation } from "@apollo/client";
+import { gql, useMutation } from "@apollo/client";
 
 
 const AUTENTICAR_USUARIO=gql`
@@ -14,6 +14,8 @@ const AUTENTICAR_USUARIO=gql`
     } 
 `;
 const Login=()=> {
+    
+    const router=useRouter();
 
     const [mensaje,guardarMensaje]=useState(null);
 
@@ -21,7 +23,7 @@ const Login=()=> {
 
     const[autenticarUsuario]=useMutation(AUTENTICAR_USUARIO);
 
-    const router=useRouter();
+
 
     const formik=useFormik({
         initialValues:{
