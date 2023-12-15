@@ -5,6 +5,7 @@ import { useFormik } from "formik";
 import * as Yup from 'yup'
 import { useMutation,gql } from "@apollo/client";
 
+
 const NUEVA_CUENTA=gql`
     mutation NuevoUsuario($input: UsuarioInput) {
         nuevoUsuario(input: $input) {
