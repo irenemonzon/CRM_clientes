@@ -72,7 +72,6 @@ const NuevaCuenta=()=> {
                 router.push('/login');
 
             },3000)
-            //redirigir al login
 
 
             }catch(error){
