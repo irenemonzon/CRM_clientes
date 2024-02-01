@@ -8,6 +8,7 @@ const OBTENER_USUARIO=gql`
         id
         nombre
         apellido
+        
         }
     }
 `;
